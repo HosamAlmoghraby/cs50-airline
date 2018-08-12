@@ -1,0 +1,12 @@
+{% extends "flights/layout.html" %}
+
+{% block title %}
+    Passenger {{ passenger.id }}
+{% endblock %}
+
+{% block body %}
+    <h1>Passenger {{ passenger.id }}</h1>
+    <ul>
+        <li>{{ passenger.first }} {{ passenger.last }} {{ passenger.flights }}</li>
+    </ul>
+{% endblock %}

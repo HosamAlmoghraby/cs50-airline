@@ -1,0 +1,13 @@
+{% extends "flights/layout.html" %}
+
+{% block title %}
+    Passengers
+{% endblock %}
+
+{% block body %}
+    <h1>Passengers</h1>
+
+    {% for passenger in passengers %}
+        <li>{{ passenger.first }} {{ passenger.last }}</li>
+    {% endfor %}
+{% endblock %}
