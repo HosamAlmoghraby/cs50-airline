@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block body %}
-<div><a href="/airports">Airports</a></div>
-<div><a href="/flights">Flights</a></div>
+    <h1>Flights</h1>
+
+    {% for flight in flights %}
+        <li>{{ flight }}</li>
+    {% endfor %}
 {% endblock %}

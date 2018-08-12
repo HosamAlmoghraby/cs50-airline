@@ -1,0 +1,13 @@
+{% extends "flights/layout.html" %}
+
+{% block title %}
+    Airports
+{% endblock %}
+
+{% block body %}
+    <h1>Airports</h1>
+
+    {% for airport in airports %}
+        <li>{{ airport }}</li>
+    {% endfor %}
+{% endblock %}
