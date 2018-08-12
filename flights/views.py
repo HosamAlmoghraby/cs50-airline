@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 from .models import Airport, Flight
 
 
@@ -19,3 +20,14 @@ def flights(request):
         "flights": Flight.objects.all()
     }
     return render(request, 'flights/flights.html', context)
+
+
+def flight(request, flight_id):
+    try:
+        flight = Flight.objects.get(pk=flight_id)
+    except Flight.DoesNotExist:
+        raise Http404("Flight does not exist")
+    context = {
+        "flight": flight
+    }
+    return render(request, 'flights/flight.html', context)
