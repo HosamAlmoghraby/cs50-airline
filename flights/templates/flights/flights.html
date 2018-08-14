@@ -8,6 +8,9 @@
     <h1>Flights</h1>
 
     {% for flight in flights %}
-        <li>{{ flight }}</li>
+        <li>
+          <a href="{%  url 'flight' flight.id %}">{{ flight }}</a>
+        </li>
     {% endfor %}
+    <a href="{% url 'index' %}">Back to Home</a>
 {% endblock %}

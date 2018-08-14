@@ -6,8 +6,10 @@
 
 {% block body %}
     <h1>Passengers</h1>
-
     {% for passenger in passengers %}
-        <li>{{ passenger.first }} {{ passenger.last }}</li>
+        <li>
+            <a href="{%  url 'passenger' passenger.id %}">{{ passenger.first }} {{ passenger.last }}</a>
+        </li>
     {% endfor %}
+    <a href="{% url 'index' %}">Back to Home</a>
 {% endblock %}

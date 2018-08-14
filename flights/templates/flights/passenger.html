@@ -7,10 +7,11 @@
 {% block body %}
     <h1>Passenger {{ passenger.id }}</h1>
     <ul>
-        <li>{{ passenger.first }} {{ passenger.last }} {{ flight }}</li>
+        <li>First: {{ passenger.first }}</li>
+        <li>Last: {{ passenger.last }}</li>
     </ul>
 
-    <h1>Flights</h1>
+    <h2>Booked Flights</h2>
     {% for flight in flights %}
         <ul>
             <li>{{ flight }}</li>
@@ -18,4 +19,7 @@
     {% empty %}
         No flights booked for this passenger!
     {% endfor %}
+    <div>
+        <a href="{% url 'passengers' %}">Back to Passengers</a>
+    </div>
 {% endblock %}
