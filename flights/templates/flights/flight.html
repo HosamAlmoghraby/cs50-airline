@@ -9,6 +9,15 @@
     <ul>
         <li>Origin: {{ flight.origin }}</li>
         <li>Destination: {{ flight.destination }}</li>
-        <li>Duration: {{ flight.duration }} munites</li>
+        <li>Duration: {{ flight.duration }} minutes</li>
     </ul>
+
+    <h1>Passengers</h1>
+        {% for passenger in passengers %}
+            <ul>
+                <li>{{ passenger }}</li>
+            </ul>
+        {% empty %}
+            No passengers at this flight!
+        {% endfor %}
 {% endblock %}
