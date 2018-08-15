@@ -6,11 +6,11 @@
 
 {% block body %}
     <h1>Flights</h1>
-
     {% for flight in flights %}
         <li>
           <a href="{%  url 'flight' flight.id %}">{{ flight }}</a>
         </li>
     {% endfor %}
+    <hr>
     <a href="{% url 'index' %}">Back to Home</a>
 {% endblock %}

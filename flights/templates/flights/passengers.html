@@ -11,5 +11,6 @@
             <a href="{%  url 'passenger' passenger.id %}">{{ passenger.first }} {{ passenger.last }}</a>
         </li>
     {% endfor %}
+    <hr>
     <a href="{% url 'index' %}">Back to Home</a>
 {% endblock %}

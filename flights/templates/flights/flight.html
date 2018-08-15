@@ -14,7 +14,7 @@
         <li>Arriving Date: {{ flight.arriving_date }}</li>
         <li>Flight Duration: {{ flight.flight_duration }}</li>
     </ul>
-
+    <hr>
     <h2>Passengers at this flight</h2>
     {% for passenger in passengers %}
         <ul>
@@ -23,6 +23,7 @@
     {% empty %}
         No passengers at this flight!
     {% endfor %}
+    <hr>
     <div>
         <a href="{% url 'flights' %}">Back to Flights</a>
     </div>

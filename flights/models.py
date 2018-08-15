@@ -20,7 +20,7 @@ class Flight(models.Model):
     flight_duration = models.CharField(max_length=6)
 
     def __str__(self):
-        return f"{self.origin} to {self.destination} ({self.flight_no})"
+        return f"{self.flight_no} {self.origin} to {self.destination}"
 
 
 class Passenger(models.Model):
