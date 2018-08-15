@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -11,12 +12,15 @@ class Airport(models.Model):
 
 
 class Flight(models.Model):
-    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="departures")
-    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="arrivals")
-    duration = models.IntegerField()
+    flight_no = models.CharField(max_length=10)
+    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='departures')
+    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='arrivals')
+    departure_date = models.DateTimeField(default=timezone.now())
+    arriving_date = models.DateTimeField(default=timezone.now())
+    flight_duration = models.CharField(max_length=6)
 
     def __str__(self):
-        return f"{self.origin} to {self.destination}"
+        return f"{self.origin} to {self.destination} ({self.flight_no})"
 
 
 class Passenger(models.Model):

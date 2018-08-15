@@ -7,9 +7,12 @@
 {% block body %}
     <h1>Flight {{ flight.id }}</h1>
     <ul>
+        <li>Flight No.: {{ flight.flight_no }}</li>
         <li>Origin: {{ flight.origin }}</li>
         <li>Destination: {{ flight.destination }}</li>
-        <li>Duration: {{ flight.duration }} minutes</li>
+        <li>Departure Date: {{ flight.departure_date }}</li>
+        <li>Arriving Date: {{ flight.arriving_date }}</li>
+        <li>Flight Duration: {{ flight.flight_duration }}</li>
     </ul>
 
     <h2>Passengers at this flight</h2>
