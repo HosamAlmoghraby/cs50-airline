@@ -8,4 +8,5 @@ urlpatterns = [
     path('flights/<int:flight_id>', views.flight, name="flight"),
     path('passengers/', views.passengers, name="passengers"),
     path('passengers/<int:passenger_id>', views.passenger, name="passenger"),
+    path('passengers/<int:passenger_id>/book', views.book, name="book")
 ]

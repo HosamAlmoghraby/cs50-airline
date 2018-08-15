@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from .models import Airport, Flight, Passenger
+from django.urls import reverse
 
 
 # Create your views here.
@@ -44,10 +45,27 @@ def passengers(request):
 def passenger(request, passenger_id):
     try:
         passenger = Passenger.objects.get(pk=passenger_id)
-    except Flight.DoesNotExist:
+    except Passenger.DoesNotExist:
         raise Http404("Passenger does not exist")
     context = {
         "passenger": passenger,
-        "flights": passenger.flights.all()
+        "flights": passenger.flights.all(),
+        "non_flights": Flight.objects.exclude(passengers=passenger).all()
     }
     return render(request, 'flights/passenger.html', context)
+
+
+def book(request, passenger_id):
+    try:
+        flight_id = int(request.POST["flight"])
+        flight = Flight.objects.get(pk=flight_id)
+        passenger = Passenger.objects.get(pk=passenger_id)
+    except KeyError:
+        return render(request, "flights/error.html", {"message": "No Selection!"})
+    except Flight.DoesNotExist:
+        return render(request, "flights/error.html", {"message": "No Flight!"})
+    except Passenger.DoesNotExist:
+        return render(request, "flights/error.html", {"message": "No Passenger!"})
+
+    passenger.flights.add(flight)
+    return HttpResponseRedirect(reverse('passenger', args=(passenger_id,)))
