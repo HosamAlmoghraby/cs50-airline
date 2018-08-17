@@ -2,6 +2,13 @@ from django.shortcuts import render
 from django.http import Http404, HttpResponseRedirect
 from .models import Airport, Flight, Passenger
 from django.urls import reverse
+from rest_framework import viewsets
+from .serializers import AirportSerializer
+
+
+class AirportView(viewsets.ModelViewSet):
+    queryset = Airport.objects.all()
+    serializer_class = AirportSerializer
 
 
 # Create your views here.
@@ -50,7 +57,7 @@ def passenger(request, passenger_id):
     context = {
         "passenger": passenger,
         "flights": passenger.flights.all(),
-        "non_flights": Flight.objects.exclude(passengers=passenger).all()
+        "non_flights": Flight.objects.exclude(passengers=passenger)
     }
     return render(request, 'flights/passenger.html', context)
 
