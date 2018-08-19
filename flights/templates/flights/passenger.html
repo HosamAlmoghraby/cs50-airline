@@ -6,34 +6,34 @@
 
 {% block body %}
     <h1>Passenger {{ passenger.id }}</h1>
-    <ul>
         <li>First: {{ passenger.first }}</li>
         <li>Last: {{ passenger.last }}</li>
-    </ul>
     <hr>
     <h2>Booked Flights</h2>
     {% for flight in flights %}
-        <ul>
+        <ol>
             <li>{{ flight }}</li>
-        </ul>
+        </ol>
     {% empty %}
         No flights booked for this passenger!
     {% endfor %}
     <hr>
     <h2>Book a flight</h2>
     {% if non_flights %}
-    <form action="{% url 'book' passenger.id %}" method="post">
-        {% csrf_token %}
-        <select name="flight">
-            {% for flight in non_flights %}
-                <option value="{{ flight.id }}">{{ flight }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Book Flight">
-    </form>
+    <div class="form-group">
+        <form action="{% url 'book' passenger.id %}" method="post">
+            {% csrf_token %}
+            <select name="flight" class="custom-select">
+                {% for flight in non_flights %}
+                    <option value="{{ flight.id }}">{{ flight }}</option>
+                {% endfor %}
+            </select>
+            <button class="btn btn-dark btn-sm">Book Flight</button>
+        </form>
+    </div>
     {% else %}
         <div>No flights to book!</div>
-    {% endif %}
+sel {% endif %}
     <hr>
     <div>
         <a href="{% url 'passengers' %}">Back to Passengers</a>
