@@ -3,12 +3,22 @@ from django.http import Http404, HttpResponseRedirect
 from .models import Airport, Flight, Passenger
 from django.urls import reverse
 from rest_framework import viewsets
-from .serializers import AirportSerializer
+from .serializers import AirportSerializer, FlightSerializer, PassengerSerializer
 
 
 class AirportView(viewsets.ModelViewSet):
     queryset = Airport.objects.all()
     serializer_class = AirportSerializer
+
+
+class FlightView(viewsets.ModelViewSet):
+    queryset = Flight.objects.all()
+    serializer_class = FlightSerializer
+
+
+class PassengerView(viewsets.ModelViewSet):
+    queryset = Passenger.objects.all()
+    serializer_class = PassengerSerializer
 
 
 # Create your views here.
@@ -76,3 +86,14 @@ def book(request, passenger_id):
 
     passenger.flights.add(flight)
     return HttpResponseRedirect(reverse('passenger', args=(passenger_id,)))
+
+
+def add_airport(request):
+    if request.method == 'POST':
+        airport = Airport()
+        airport.code = request.POST["code"]
+        airport.city = request.POST["city"]
+        Airport.save(airport)
+        return HttpResponseRedirect(reverse("airports"))
+    else:
+        return render(request, 'flights/add_airport.html')
