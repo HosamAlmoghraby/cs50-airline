@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b2252b7-fd8b-40ec-a7eb-53bab0862924" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/airline/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/airline/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/airline/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/airline/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/add_airport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/add_airport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/airports.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/airports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/flight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/flights.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/flights.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/passenger.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/passenger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/passengers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/passengers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flights/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,14 +39,14 @@
           <entry key="html" value="90" />
           <entry key="md" value="61" />
           <entry key="py" value="57" />
-          <entry key="txt" value="98" />
+          <entry key="txt" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="90" />
           <entry key="Markdown" value="61" />
-          <entry key="PLAIN_TEXT" value="98" />
+          <entry key="PLAIN_TEXT" value="122" />
           <entry key="Python" value="57" />
         </counts>
       </usages-collector>
@@ -208,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540654103505</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new app 'flights2', namespaces">
+      <created>1540670230406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540670230406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -239,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="README file update" />
     <MESSAGE value="forloop counter, flights and passengers list directs" />
-    <option name="LAST_COMMIT_MESSAGE" value="forloop counter, flights and passengers list directs" />
+    <MESSAGE value="new app 'flights2', namespaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="new app 'flights2', namespaces" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/airline/settings.py">

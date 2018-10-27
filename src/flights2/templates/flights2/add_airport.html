@@ -1,0 +1,21 @@
+{% extends "flights2/layout.html" %}
+
+{% block title %}
+    Add Airport
+{% endblock %}
+
+{% block body %}
+    <h1>Add Airport</h1>
+    <form action="{% url 'flights2:add_airport' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Code</label>
+            <input type="text" class="form-control" name="code" placeholder="Airport Code">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="Airport City">
+            <button class="btn btn-dark" type="submit">Add</button>
+        </div>
+        <hr>
+        <a href="{% url 'flights2:airports' %}">Back to Airports</a>
+    </form>
+{% endblock %}

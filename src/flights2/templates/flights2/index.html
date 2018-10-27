@@ -1,0 +1,11 @@
+{% extends "flights2/layout.html" %}
+
+{% block title %}
+    Flights
+{% endblock %}
+
+{% block body %}
+    <div><a href="{% url 'flights2:airports' %}">Airports</a></div>
+    <div><a href="{% url 'flights2:flights' %}">Flights</a></div>
+    <div><a href="{% url 'flights2:passengers' %}">Passengers</a></div>
+{% endblock %}
