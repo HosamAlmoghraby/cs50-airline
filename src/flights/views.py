@@ -80,7 +80,7 @@ def book(request, passenger_id):
         return render(request, "flights/error.html", {"message": "No Passenger!"})
 
     passenger.flights.add(flight)
-    return HttpResponseRedirect(reverse('passenger', args=(passenger_id,)))
+    return HttpResponseRedirect(reverse('flights:passenger', args=(passenger_id,)))
 
 
 def add_airport(request):
@@ -93,6 +93,6 @@ def add_airport(request):
         # airport.code = request.POST["code"]
         # airport.city = request.POST["city"]
         # airport.save()
-        return HttpResponseRedirect(reverse("airports"))
+        return HttpResponseRedirect(reverse("flights:airports"))
     else:
         return render(request, 'flights/add_airport.html')

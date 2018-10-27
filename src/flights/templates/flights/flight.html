@@ -15,12 +15,12 @@
     <hr>
     <h2>Passengers at this flight</h2>
     {% for passenger in passengers %}
-            <a href="{% url 'passenger' passenger.id %}"><li>{{ forloop.counter }} - {{ passenger }}</li></a>
+            <a href="{% url 'flights:passenger' passenger.id %}"><li>{{ forloop.counter }} - {{ passenger }}</li></a>
     {% empty %}
         No passengers at this flight!
     {% endfor %}
     <hr>
     <div>
-        <a href="{% url 'flights' %}">Back to Flights</a>
+        <a href="{% url 'flights:flights' %}">Back to Flights</a>
     </div>
 {% endblock %}

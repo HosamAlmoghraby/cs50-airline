@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <div><a href="/airports">Airports</a></div>
-    <div><a href="/flights">Flights</a></div>
-    <div><a href="/passengers">Passengers</a></div>
+    <div><a href="{% url 'flights:airports' %}">Airports</a></div>
+    <div><a href="{% url 'flights:flights' %}">Flights</a></div>
+    <div><a href="{% url 'flights:passengers' %}">Passengers</a></div>
 {% endblock %}

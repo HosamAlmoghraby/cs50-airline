@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>Add Airport</h1>
-    <form action="{% url 'add_airport' %}" method="post">
+    <form action="{% url 'flights:add_airport' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
             <label>Code</label>

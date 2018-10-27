@@ -8,9 +8,9 @@
     <h1>Passengers</h1>
     {% for passenger in passengers %}
         <li>
-            <a href="{%  url 'passenger' passenger.id %}">{{ forloop.counter }} - {{ passenger.first }} {{ passenger.last }}</a>
+            <a href="{%  url 'flights:passenger' passenger.id %}">{{ forloop.counter }} - {{ passenger.first }} {{ passenger.last }}</a>
         </li>
     {% endfor %}
     <hr>
-    <a href="{% url 'index' %}">Back to Home</a>
+    <a href="{% url 'flights:index' %}">Back to Home</a>
 {% endblock %}

@@ -2,40 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b2252b7-fd8b-40ec-a7eb-53bab0862924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/logging.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/migrations/0002_auto_20180830_2037.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/migrations/0003_auto_20180830_2107.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/static/flights/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/static/flights/img/banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/add_airport.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/airports.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/flight.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/flights.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/passenger.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/templates/flights/passengers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flights/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/airline/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/airline/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/airline/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/airline/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/add_airport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/add_airport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/airports.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/airports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/flight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/flights.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/flights.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/passenger.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/passenger.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/templates/flights/passengers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/templates/flights/passengers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flights/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,22 +35,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="html" value="10" />
+          <entry key="md" value="1" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="HTML" value="10" />
+          <entry key="Markdown" value="1" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5" />
+          <entry key="html" value="90" />
+          <entry key="md" value="61" />
+          <entry key="py" value="57" />
+          <entry key="txt" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5" />
+          <entry key="HTML" value="90" />
+          <entry key="Markdown" value="61" />
+          <entry key="PLAIN_TEXT" value="98" />
+          <entry key="Python" value="57" />
         </counts>
       </usages-collector>
     </session>
@@ -85,6 +75,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/airline/settings.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/flights/templates/flights/index.html" />
+        <option value="$PROJECT_DIR$/src/flights2/templates/flights2/index.html" />
+        <option value="$PROJECT_DIR$/src/flights/urls.py" />
+        <option value="$PROJECT_DIR$/src/flights2/urls.py" />
+        <option value="$PROJECT_DIR$/src/flights/templates/flights/layout.html" />
+        <option value="$PROJECT_DIR$/src/flights2/templates/flights2/layout.html" />
       </list>
     </option>
   </component>
@@ -116,7 +113,49 @@
               <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
               <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="airline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="flights" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="flights" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="flights" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="flights" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="flights2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="flights2" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs50-airline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="flights2" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="flights2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cs50-airline" type="b2602c69:ProjectViewProjectNode" />
@@ -155,6 +194,21 @@
       <option name="presentableId" value="Default" />
       <updated>1540046493874</updated>
     </task>
+    <task id="LOCAL-00001" summary="README file update">
+      <created>1540647047099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540647047099</updated>
+    </task>
+    <task id="LOCAL-00002" summary="forloop counter, flights and passengers list directs">
+      <created>1540654103505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540654103505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -164,7 +218,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -172,7 +226,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.43442622" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -182,11 +236,96 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="README file update" />
+    <MESSAGE value="forloop counter, flights and passengers list directs" />
+    <option name="LAST_COMMIT_MESSAGE" value="forloop counter, flights and passengers list directs" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/airline/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights2/templates/flights2/add_airport.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights/templates/flights/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/airline/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-163" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights2/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1380">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights2/templates/flights2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights2/templates/flights2/airports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights2/templates/flights2/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="33" selection-start-line="33" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights/templates/flights/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="33" column="106" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flights2/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
