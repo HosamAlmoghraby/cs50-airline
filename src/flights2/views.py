@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import Http404, HttpResponseRedirect
 from .models import Airport, Flight, Passenger
 from django.urls import reverse
+from .forms import AirportForm
 
 # Create your views here.
 def index(request):
@@ -89,10 +90,11 @@ def add_airport(request):
             code = request.POST["code"],
             city = request.POST["city"]
             )
-        # airport = Airport()
-        # airport.code = request.POST["code"]
-        # airport.city = request.POST["city"]
-        # airport.save()
         return HttpResponseRedirect(reverse("flights2:airports"))
     else:
-        return render(request, 'flights2/add_airport.html')
+        airport_form = AirportForm()
+
+        context = {
+            "airport_form": airport_form
+            }
+        return render(request, 'flights2/add_airport.html', context)

@@ -10,9 +10,9 @@
         {% csrf_token %}
         <div class="form-group">
             <label>Code</label>
-            <input type="text" class="form-control" name="code" placeholder="Airport Code">
+            {{ airport_form.code }}
             <label>City</label>
-            <input type="text" class="form-control" name="city" placeholder="Airport City">
+            {{ airport_form.city }}
             <button class="btn btn-dark" type="submit">Add</button>
         </div>
         <hr>
