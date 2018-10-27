@@ -7,7 +7,7 @@
 {% block body %}
     <h1>Airports</h1>
     {% for airport in airports %}
-        <li>{{ airport }}</li>
+        <li>{{ forloop.counter }} - {{ airport }}</li>
     {% endfor %}
     <hr>
     <a href="{% url 'index' %}">Back to Home</a>

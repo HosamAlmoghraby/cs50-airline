@@ -9,15 +9,19 @@ def index(request):
 
 
 def airports(request):
+    airports = Airport.objects.all()
+
     context = {
-        "airports": Airport.objects.all()
+        "airports": airports
     }
     return render(request, 'flights/airports.html', context)
 
 
 def flights(request):
+    flights = Flight.objects.all()
+    
     context = {
-        "flights": Flight.objects.all()
+        "flights": flights
     }
     return render(request, 'flights/flights.html', context)
 
@@ -27,16 +31,21 @@ def flight(request, flight_id):
         flight = Flight.objects.get(pk=flight_id)
     except Flight.DoesNotExist:
         raise Http404("Flight does not exist")
+    
+    passengers = flight.passengers.all()
+
     context = {
         "flight": flight,
-        "passengers": flight.passengers.all()
+        "passengers": passengers
     }
     return render(request, 'flights/flight.html', context)
 
 
 def passengers(request):
+    passengers = Passenger.objects.all()
+
     context = {
-        "passengers": Passenger.objects.all()
+        "passengers": passengers
     }
     return render(request, 'flights/passengers.html', context)
 
@@ -46,10 +55,14 @@ def passenger(request, passenger_id):
         passenger = Passenger.objects.get(pk=passenger_id)
     except Passenger.DoesNotExist:
         raise Http404("Passenger does not exist")
+
+    flights = passenger.flights.all()
+    non_flights = Flight.objects.exclude(passengers=passenger)
+
     context = {
         "passenger": passenger,
-        "flights": passenger.flights.all(),
-        "non_flights": Flight.objects.exclude(passengers=passenger)
+        "flights": flights,
+        "non_flights": non_flights
     }
     return render(request, 'flights/passenger.html', context)
 
@@ -72,10 +85,14 @@ def book(request, passenger_id):
 
 def add_airport(request):
     if request.method == 'POST':
-        airport = Airport()
-        airport.code = request.POST["code"]
-        airport.city = request.POST["city"]
-        Airport.save(airport)
+        Airport.objects.create(
+            code = request.POST["code"],
+            city = request.POST["city"]
+            )
+        # airport = Airport()
+        # airport.code = request.POST["code"]
+        # airport.city = request.POST["city"]
+        # airport.save()
         return HttpResponseRedirect(reverse("airports"))
     else:
         return render(request, 'flights/add_airport.html')

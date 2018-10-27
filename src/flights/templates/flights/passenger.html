@@ -11,9 +11,7 @@
     <hr>
     <h2>Booked Flights</h2>
     {% for flight in flights %}
-        <ol>
-            <li>{{ flight }}</li>
-        </ol>
+            <a href="{% url 'flight' flight.id %}"><li>{{ forloop.counter }} - {{ flight }}</li></a>
     {% empty %}
         No flights booked for this passenger!
     {% endfor %}

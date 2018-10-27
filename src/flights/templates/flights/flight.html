@@ -15,9 +15,7 @@
     <hr>
     <h2>Passengers at this flight</h2>
     {% for passenger in passengers %}
-        <ol>
-            <li>{{ passenger }}</li>
-        </ol>
+            <a href="{% url 'passenger' passenger.id %}"><li>{{ forloop.counter }} - {{ passenger }}</li></a>
     {% empty %}
         No passengers at this flight!
     {% endfor %}
