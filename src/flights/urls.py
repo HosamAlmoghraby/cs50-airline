@@ -1,14 +1,5 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
-from rest_framework import routers
-from django.conf import settings
-from django.conf.urls.static import static
-
-router = routers.DefaultRouter()
-router.register('airports', views.AirportView)
-router.register('flights', views.FlightView)
-router.register('passengers', views.PassengerView)
-
 
 urlpatterns = [
     path('', views.index, name="index"),
@@ -19,5 +10,4 @@ urlpatterns = [
     path('passengers/', views.passengers, name="passengers"),
     path('passengers/<int:passenger_id>', views.passenger, name="passenger"),
     path('passengers/<int:passenger_id>/book', views.book, name="book"),
-    path('api/', include(router.urls)),
 ]

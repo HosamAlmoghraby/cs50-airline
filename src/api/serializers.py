@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Airport, Flight, Passenger
+from flights.models import Airport, Flight, Passenger
 
 
 class AirportSerializer(serializers.ModelSerializer):
