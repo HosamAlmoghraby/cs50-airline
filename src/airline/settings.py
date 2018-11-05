@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'flights',
     'flights2',
+    'flights3',
     'api',
 ]
 

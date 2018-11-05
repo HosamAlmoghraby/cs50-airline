@@ -1,0 +1,15 @@
+{% extends "flights3/base.html" %}
+
+{% block title %}
+    Airport {{ airport.id }}
+{% endblock %}
+
+{% block body %}
+    <h1>Airport {{ airport.id }}</h1>
+        <li>Code: {{ airport.code }}</li>
+        <li>City: {{ airport.city }}</li>
+    <hr>
+    <div>
+        <a href="../">Back to Airports</a>
+    </div>
+{% endblock %}
