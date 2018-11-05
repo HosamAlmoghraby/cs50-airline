@@ -1,35 +1,92 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import Http404, HttpResponseRedirect
+from django.contrib import messages
 from .models import Airport, Flight, Passenger
 from django.urls import reverse
-from .forms import AirportForm
+from .forms import AirportForm, FlightModelForm, PassengerModelForm
+
 
 # Create your views here.
 def index(request):
     return render(request, 'flights2/index.html')
 
 
-def airports(request):
-    airports = Airport.objects.all()
+# ------------------------------ airport ------------------------------ #
+
+def airport_list_view(request):
+    queryset = Airport.objects.all()
 
     context = {
-        "airports": airports
+        "object_list": queryset
     }
-    return render(request, 'flights2/airports.html', context)
+    return render(request, 'flights2/airport_list.html', context)
 
 
-def flights(request):
-    flights = Flight.objects.all()
+# def airport_create_view(request):
+#     if request.method == 'POST':
+#         Airport.objects.create(
+#             code = request.POST["code"],
+#             city = request.POST["city"]
+#             )
+#         return HttpResponseRedirect(reverse("flights2:airport_list"))
+#     else:
+#         airport_form = AirportForm()
+
+#         context = {
+#             "airport_form": airport_form
+#             }
+#         return render(request, 'flights2/airport_create.html', context)
+
+
+
+def airport_create_view(request):
+    airport_form = AirportForm(request.POST or None)
+    if airport_form.is_valid():
+        Airport.objects.create(**airport_form.cleaned_data)
+        messages.success(request, 'Airpot added successfully')
+        return HttpResponseRedirect(reverse("flights2:airport_list"))
+
+    context = {
+        "airport_form": airport_form
+        }
+    return render(request, 'flights2/airport_create.html', context)
+
+
+
+# def airport_create_view(request):
+#     airport_form = AirportModelForm(request.POST or None)
+#     if airport_form.is_valid():
+#         airport_form.save()
+#         return redirect("../")
+
+#     context = {
+#         "airport_form": airport_form
+#         }
+#     return render(request, 'flights2/airport_create.html', context)
+
+
+
+
+
+
+
+
+
+# ------------------------------ flight ------------------------------ #
+
+def flight_list_view(request):
+    queryset = Flight.objects.all()
     
     context = {
-        "flights": flights
+        "object_list": queryset
     }
-    return render(request, 'flights2/flights.html', context)
+    return render(request, 'flights2/flight_list.html', context)
 
 
-def flight(request, flight_id):
+
+def flight_detail_view(request, id):
     try:
-        flight = Flight.objects.get(pk=flight_id)
+        flight = Flight.objects.get(pk=id)
     except Flight.DoesNotExist:
         raise Http404("Flight does not exist")
     
@@ -39,21 +96,43 @@ def flight(request, flight_id):
         "flight": flight,
         "passengers": passengers
     }
-    return render(request, 'flights2/flight.html', context)
+    return render(request, 'flights2/flight_detail.html', context)
 
 
-def passengers(request):
-    passengers = Passenger.objects.all()
+
+def flight_create_view(request):
+    flight_form = FlightModelForm(request.POST or None)
+    if flight_form.is_valid():
+        flight_form.save()
+        return redirect('../')
 
     context = {
-        "passengers": passengers
+        "flight_form": flight_form
     }
-    return render(request, 'flights2/passengers.html', context)
+    return render(request, 'flights2/flight_create.html', context)
 
 
-def passenger(request, passenger_id):
+
+
+
+
+
+
+# ------------------------------ passenger ------------------------------ #
+
+def passenger_list_view(request):
+    queryset = Passenger.objects.all()
+
+    context = {
+        "object_list": queryset
+    }
+    return render(request, 'flights2/passenger_list.html', context)
+
+
+
+def passenger_detail_view(request, id):
     try:
-        passenger = Passenger.objects.get(pk=passenger_id)
+        passenger = Passenger.objects.get(pk=id)
     except Passenger.DoesNotExist:
         raise Http404("Passenger does not exist")
 
@@ -65,14 +144,55 @@ def passenger(request, passenger_id):
         "flights": flights,
         "non_flights": non_flights
     }
-    return render(request, 'flights2/passenger.html', context)
+    return render(request, 'flights2/passenger_detail.html', context)
 
 
-def book(request, passenger_id):
+
+def passenger_create_view(request):
+    passenger_form = PassengerModelForm(request.POST or None)
+    if passenger_form.is_valid():
+        passenger_form.save()
+        return redirect('../')
+
+    context = {
+        "passenger_form": passenger_form
+    }
+    return render(request, 'flights2/passenger_create.html', context)
+
+
+
+def passenger_update_view(request, id):
+    passenger_details = get_object_or_404(Passenger, id=id)
+    passenger_form = PassengerModelForm(request.POST or None, instance=passenger_details)
+    if passenger_form.is_valid():
+        passenger_form.save()
+        return redirect('../')
+
+    context = {
+        "passenger_form": passenger_form
+    }
+    return render(request, 'flights2/passenger_update.html', context)
+
+
+
+def passenger_delete_view(request, id):
+    obj = get_object_or_404(Passenger, id=id)
+    if request.method == "POST":
+        obj.delete()
+        return redirect('../../')
+
+    context = {
+        "object": obj
+    }
+    return render(request, 'flights2/passenger_delete.html', context)
+
+
+
+def book_flight(request, id):
     try:
         flight_id = int(request.POST["flight"])
         flight = Flight.objects.get(pk=flight_id)
-        passenger = Passenger.objects.get(pk=passenger_id)
+        passenger = Passenger.objects.get(pk=id)
     except KeyError:
         return render(request, "flights2/error.html", {"message": "No Selection!"})
     except Flight.DoesNotExist:
@@ -81,20 +201,4 @@ def book(request, passenger_id):
         return render(request, "flights2/error.html", {"message": "No Passenger!"})
 
     passenger.flights.add(flight)
-    return HttpResponseRedirect(reverse('flights2:passenger', args=(passenger_id,)))
-
-
-def add_airport(request):
-    if request.method == 'POST':
-        Airport.objects.create(
-            code = request.POST["code"],
-            city = request.POST["city"]
-            )
-        return HttpResponseRedirect(reverse("flights2:airports"))
-    else:
-        airport_form = AirportForm()
-
-        context = {
-            "airport_form": airport_form
-            }
-        return render(request, 'flights2/add_airport.html', context)
+    return HttpResponseRedirect(reverse('flights2:passenger_detail', args=(id,)))
