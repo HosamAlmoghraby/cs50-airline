@@ -1,4 +1,5 @@
-{% extends "flights3/base.html" %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     Home
@@ -7,7 +8,10 @@
 
 {% block body %}
 	
-	{% include "flights3/banner.html" %}
+	<div>
+		<img src="{% static 'img/banner.jpg' %}" class="img-fluid" alt="Responsive image">
+	</div>
+	<hr>
 
     <div><a href="{% url 'flights3:airport_list' %}">Airports</a></div>
     <div><a href="{% url 'flights3:flight_list' %}">Flights</a></div>
