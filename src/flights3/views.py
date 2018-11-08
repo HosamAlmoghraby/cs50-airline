@@ -211,6 +211,16 @@ def airport_list_view(request):
 
 
 
+def airport_detail_view(request, pk):
+    obj = get_object_or_404(Airport, pk=pk)
+
+    context = {
+        "object": obj
+    }
+    return render(request, 'flights3/airport_detail.html', context)
+
+
+
 # def airport_create_view(request):
 #     if request.method == 'POST':
 #         Airport.objects.create(
