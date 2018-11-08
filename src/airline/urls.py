@@ -20,6 +20,7 @@ urlpatterns = [
     path('', include('flights.urls')),
     path('2/', include('flights2.urls')),
     path('3/', include('flights3.urls')),
+    path('blog/', include('blog.urls')),
     path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
 ]
