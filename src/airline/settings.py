@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'flights',
     'flights2',
     'flights3',
+    'blog',
     'api',
 ]
 
